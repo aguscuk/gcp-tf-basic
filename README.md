@@ -5,7 +5,6 @@ Reff: https://www.youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
 ### 1. setting environment
 ```shell
 export TF_VAR_google_credentials=$(cat /home/aguscuk/learning/creds/learning01-348513-9b8361167347.json)
-export env="dev"
 ```
 
 ### 2. deploy vpc development
