@@ -7,4 +7,9 @@ provider "google" {
 module "my_vpc_qas" {
   source = "../modules/networks"
   vpc_name = "${var.env}-vpc"
+  vpc_region  = var.region
+  subnet_name = "${var.env}-subnet"
+  subnet_ip_cidr = "10.150.0.0/16"
+  subnet_secondary_name = "${var.env}-secondary-subnet"
+  subnet_secondary_range = "192.168.50.0/24"
 }
