@@ -2,23 +2,32 @@ Reff: https://www.youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
 
 ## How to Start
 
-### 1. Export variable
+### 1. setting environment
 ```shell
 export TF_VAR_google_credentials=$(cat /home/aguscuk/learning/creds/learning01-348513-9b8361167347.json)
 export env="dev"
 ```
 
-### 2. Init
+### 2. deploy vpc development
 ```shell
+cd development
 terraform init -var-file terraform-dev.tfvars
-```
-
-### 3. Plan
-```shell
 terraform plan -var-file terraform-dev.tfvars
+terraform apply -var-file terraform-dev.tfvars
 ```
 
-### 4. Apply
+### 3. deploy vpc staging
 ```shell
-terraform apply -var-file terraform-dev.tfvars
+cd staging
+terraform init -var-file terraform-qas.tfvars
+terraform plan -var-file terraform-qas.tfvars
+terraform apply -var-file terraform-qas.tfvars
+```
+
+### 4. deploy vpc production
+```shell
+cd production
+terraform init -var-file terraform-prd.tfvars
+terraform plan -var-file terraform-prd.tfvars
+terraform apply -var-file terraform-prd.tfvars
 ```
