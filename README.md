@@ -1,5 +1,3 @@
-Reff: https://www.youtube.com/playlist?list=PL4SGTPmSY0qngs44Ssc0RHO9h4fmZ9JUb
-
 ## How to Start
 
 ### 1. setting environment
